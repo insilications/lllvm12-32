@@ -1,0 +1,25 @@
+From fd5521c2b8be67f18bc3c047a1968e7c7d87745b Mon Sep 17 00:00:00 2001
+From: Francisco Boni <boboniboni@gmail.com>
+Date: Sun, 28 Mar 2021 07:44:30 -0300
+Subject: [PATCH 1/2] Make default to skylake
+
+---
+ clang/lib/Driver/ToolChains/Arch/X86.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clang/lib/Driver/ToolChains/Arch/X86.cpp b/clang/lib/Driver/ToolChains/Arch/X86.cpp
+index 94a53f9d9..fefa89a80 100644
+--- a/clang/lib/Driver/ToolChains/Arch/X86.cpp
++++ b/clang/lib/Driver/ToolChains/Arch/X86.cpp
+@@ -103,7 +103,7 @@ std::string x86::getX86TargetCPU(const ArgList &Args,
+     return "i686";
+   default:
+     // Fallback to p4.
+-    return "pentium4";
++    return "skylake";
+   }
+ }
+ 
+-- 
+2.30.2
+
